@@ -17,13 +17,13 @@ impl<'a> Euler<'a> {
         let t = start.get_t() + step;
         let coord = Coordinate::new(
             t,
-            start.get_s() + self.irsir.ds_dt(start.get_s(), start.get_i()) * (t),
-            start.get_i() + self.irsir.di_dt(start.get_s(), start.get_i(), start.get_r()) * (t),
-            start.get_r() + self.irsir.dr_dt(start.get_i(), start.get_r()) * (t),
+            start.get_s() + self.irsir.ds_dt(start.get_s(), start.get_i()) * (step),
+            start.get_i() + self.irsir.di_dt(start.get_s(), start.get_i(), start.get_r()) * (step),
+            start.get_r() + self.irsir.dr_dt(start.get_i(), start.get_r()) * (step),
         );
         self.estimations.push(start);
 
-        if stop > t {
+        if stop + step >= t {
             self.estimate(coord, stop, step);
         }
     }
