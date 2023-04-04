@@ -1,12 +1,13 @@
+#[derive(Debug)]
 pub struct Coordinate {
-    t: f32,
-    s: f32,
-    i: f32,
-    r: f32
+    t: f64,
+    s: f64,
+    i: f64,
+    r: f64
 }
 
 impl Coordinate {
-    pub fn new(t: f32, s: f32, i: f32, r: f32) -> Self {
+    pub fn new(t: f64, s: f64, i: f64, r: f64) -> Self {
         return Self {
             t,
             s,
@@ -15,19 +16,19 @@ impl Coordinate {
         }
     }
 
-    pub fn get_t(&self) -> f32 {
+    pub fn get_t(&self) -> f64 {
         return self.t
     }
 
-    pub fn get_s(&self) -> f32 {
+    pub fn get_s(&self) -> f64 {
         return self.s
     }
 
-    pub fn get_i(&self) -> f32 {
+    pub fn get_i(&self) -> f64 {
         return self.i
     }
 
-    pub fn get_r(&self) -> f32 {
+    pub fn get_r(&self) -> f64 {
         return self.r
     }
 }

@@ -13,7 +13,7 @@ impl<'a> Euler<'a> {
         }
     }
 
-    pub fn estimate(&mut self, start: Coordinate, stop: Coordinate, step: f32) {
+    pub fn estimate(&mut self, start: Coordinate, stop: f64, step: f64) {
         let t = start.get_t() + step;
         let coord = Coordinate::new(
             t,
@@ -23,7 +23,7 @@ impl<'a> Euler<'a> {
         );
         self.estimations.push(start);
 
-        if stop.get_t() > t {
+        if stop > t {
             self.estimate(coord, stop, step);
         }
     }
