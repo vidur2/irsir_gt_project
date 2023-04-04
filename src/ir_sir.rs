@@ -1,4 +1,5 @@
 use crate::{euler::Euler, coordinate::Coordinate};
+use crate::error::Error;
 
 pub struct IrSir {
     alpha: f32,
@@ -19,11 +20,23 @@ impl IrSir {
         }
     }
 
-    pub fn estimate(&self, start: Coordinate, stop: Coordinate, step: f32) -> Vec<Coordinate> {
+    pub fn estimate(&self, start: Coordinate, stop: Coordinate, step: f32) -> Result<Vec<Coordinate>, Error> {
+        if (stop.get_t() - start.get_t()) % step == 0. {
+            return Err(Error::RangeError)
+        }
+
+        if step < 0. && stop.get_t() > start.get_t() {
+            return Err(Error::NegativeSignError)
+        }
+
+        if step > 0. && stop.get_t() < start.get_t() {
+            return Err(Error::PositiveSignError)
+        }
+
         let mut euler = Euler::new(self, Box::new(Self::ds_dt), Box::new(Self::di_dt), Box::new(Self::dr_dt));
         euler.estimate(start, stop, step);
 
-        return euler.get_estimations();
+        return Ok(euler.get_estimations());
     }
 
     fn ds_dt(&self, s: f32, i: f32) -> f32{
