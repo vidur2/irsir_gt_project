@@ -1,0 +1,120 @@
+vidurmodgil@Vidurs-MacBook-Air irsir_gt_project % cargo run
+warning: variant is never constructed: `RangeError`
+ --> src/error.rs:3:5
+  |
+3 |     RangeError,
+  |     ^^^^^^^^^^
+  |
+  = note: `#[warn(dead_code)]` on by default
+note: `Error` has a derived impl for the trait `Debug`, but this is intentionally ignored during dead code analysis
+ --> src/error.rs:1:10
+  |
+1 | #[derive(Debug)]
+  |          ^^^^^
+  = note: this warning originates in the derive macro `Debug` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: `irsir_gt_project` (bin "irsir_gt_project") generated 1 warning
+    Finished dev [unoptimized + debuginfo] target(s) in 0.01s
+     Running `target/debug/irsir_gt_project`
+Coordinate { t: 0.0, s: 1.5, i: 1.0, r: 1.0 }
+Coordinate { t: 0.1, s: 1.46, i: 1.0, r: 1.02 }
+Coordinate { t: 0.2, s: 1.3848, i: 0.9956, r: 1.0604 }
+Coordinate { t: 0.30000000000000004, s: 1.2862671744, i: 0.976424744, r: 1.1216600816 }
+Coordinate { t: 0.4, s: 1.1824149050113402, i: 0.9287786711929039, r: 1.2024102637957559 }
+Coordinate { t: 0.5, s: 1.0945330656551828, i: 0.8415862683134518, r: 1.2961241220313653 }
+Coordinate { t: 0.6, s: 1.0421145381916583, i: 0.7148312522382765, r: 1.3874284508500652 }
+Coordinate { t: 0.7, s: 1.0376364115576744, i: 0.5650255650038357, r: 1.45149987093929 }
+Coordinate { t: 0.7999999999999999, s: 1.0840014338015895, i: 0.42020029298645994, r: 1.4612942251126224 }
+Coordinate { t: 0.8999999999999999, s: 1.174901996488082, i: 0.3049356024957658, r: 1.4018690815747032 }
+Coordinate { t: 0.9999999999999999, s: 1.296613817921437, i: 0.22851876311301422, r: 1.2802327634123896 }
+Coordinate { t: 1.0999999999999999, s: 1.4309865201797949, i: 0.18693595057936616, r: 1.1202624979093747 }
+Coordinate { t: 1.2, s: 1.5591483991369308, i: 0.17265012399027013, r: 0.9492220530608861 }
+Coordinate { t: 1.3, s: 1.663792489857613, i: 0.18137941212722866, r: 0.7887833243943425 }
+Coordinate { t: 1.4000000000000001, s: 1.7289350786187212, i: 0.214106569729302, r: 0.6534061146449894 }
+Coordinate { t: 1.5000000000000002, s: 1.7381487396524755, i: 0.27691008490069, r: 0.5524546095419433 }
+Coordinate { t: 1.6000000000000003, s: 1.673902157320679, i: 0.3786017084319855, r: 0.4934052694320096 }
+Coordinate { t: 1.7000000000000004, s: 1.5238307166051233, i: 0.5211894646004831, r: 0.4852798480162783 }
+Coordinate { t: 1.8000000000000005, s: 1.3034244075902586, i: 0.6749961229019782, r: 0.5409714882097694 }
+Coordinate { t: 1.9000000000000006, s: 1.0894702522753437, i: 0.7507636287074659, r: 0.6717891706124341 }
+Coordinate { t: 2.0000000000000004, s: 0.9993344393915459, i: 0.6520402381834246, r: 0.8558391533821756 }
+Coordinate { t: 2.1000000000000005, s: 1.082264711503056, i: 0.43703796525855876, r: 0.98488134519353 }
+Coordinate { t: 2.2000000000000006, s: 1.2898363631416472, i: 0.2807406276658091, r: 0.9317660614874248 }
+Coordinate { t: 2.3000000000000007, s: 1.5133709235358845, i: 0.2396769407686275, r: 0.7482173839347236 }
+Coordinate { t: 2.400000000000001, s: 1.6387415715654374, i: 0.28620292548824433, r: 0.5757134320307205 }
+Coordinate { t: 2.500000000000001, s: 1.6003581538814873, i: 0.4169852119057402, r: 0.48298559875497354 }
+Coordinate { t: 2.600000000000001, s: 1.3741532025849086, i: 0.6286651331469427, r: 0.4973395672484052 }
+Coordinate { t: 2.700000000000001, s: 1.049117690636331, i: 0.7991845211872417, r: 0.6517704235473448 }
+Coordinate { t: 2.800000000000001, s: 0.9225605303084932, i: 0.629377516513431, r: 0.9480939127412795 }
+Coordinate { t: 2.9000000000000012, s: 1.163934350466874, i: 0.23622332617576997, r: 1.0998557463739014 }
+Coordinate { t: 3.0000000000000013, s: 1.6356356077257264, i: 0.11973004062882085, r: 0.7446397208520706 }
+Coordinate { t: 3.1000000000000014, s: 1.9287064809047614, i: 0.1683013109257816, r: 0.4029942484679717 }
+Coordinate { t: 3.2000000000000015, s: 1.8788414318427413, i: 0.3571134718198025, r: 0.2640458308449213 }
+Coordinate { t: 3.3000000000000016, s: 1.4031394323505213, i: 0.7958864090553601, r: 0.30097440832665645 }
+Coordinate { t: 3.4000000000000017, s: 0.6302387566164577, i: 1.2585158636727243, r: 0.6112454596252301 }
+Coordinate { t: 3.5000000000000018, s: 0.8286399646404781, i: 0.2397806562477307, r: 1.4315794030861149 }
+Coordinate { t: 3.600000000000002, s: 1.7459029483983244, i: -0.10379246344094983, r: 0.857889521755436 }
+Coordinate { t: 3.700000000000002, s: 2.572127887139322, i: -0.15793881140352906, r: 0.0858109260095371 }
+Coordinate { t: 3.800000000000002, s: 3.1347937012478733, i: -0.5799212964862459, r: -0.054872404342748204 }
+Coordinate { t: 3.900000000000002, s: 5.475631073088085, i: -2.774621199176175, r: -0.20100987381975666 }
+Coordinate { t: 4.000000000000002, s: 27.40360950143041, i: -24.422830555550387, r: -0.4807789458615916 }
+Coordinate { t: 4.100000000000001, s: 1104.591536511063, i: -1106.4342745302572, r: 4.34273801919741 }
+Coordinate { t: 4.200000000000001, s: 2053404.1660370007, i: -2046883.4162007016, r: -6518.249836299159 }
+Coordinate { t: 4.300000000000001, s: 7229296054334.673, i: -7246506479025.169, r: 17210424692.996117 }
+Coordinate { t: 4.4, s: 9.22013676258889e25, i: -9.203674322654691e25, r: -1.6462439934202026e23 }
+Coordinate { t: 4.5, s: 1.5274644475176708e52, i: -1.5295098991497646e52, r: 2.045451632093915e49 }
+Coordinate { t: 4.6, s: 4.29874046726279e104, i: -4.294423084105854e104, r: -4.3173831569371654e101 }
+Coordinate { t: 4.699999999999999, s: 3.470594735496342e209, i: -3.473208969951125e209, r: 2.6142344547833882e206 }
+Coordinate { t: 4.799999999999999, s: inf, i: NaN, r: -inf }
+Coordinate { t: 4.899999999999999, s: NaN, i: NaN, r: NaN }
+Coordinate { t: 4.999999999999998, s: NaN, i: NaN, r: NaN }
+Coordinate { t: 5.099999999999998, s: NaN, i: NaN, r: NaN }
+Coordinate { t: 5.1999999999999975, s: NaN, i: NaN, r: NaN }
+Coordinate { t: 5.299999999999997, s: NaN, i: NaN, r: NaN }
+Coordinate { t: 5.399999999999997, s: NaN, i: NaN, r: NaN }
+Coordinate { t: 5.4999999999999964, s: NaN, i: NaN, r: NaN }
+Coordinate { t: 5.599999999999996, s: NaN, i: NaN, r: NaN }
+Coordinate { t: 5.699999999999996, s: NaN, i: NaN, r: NaN }
+Coordinate { t: 5.799999999999995, s: NaN, i: NaN, r: NaN }
+Coordinate { t: 5.899999999999995, s: NaN, i: NaN, r: NaN }
+Coordinate { t: 5.999999999999995, s: NaN, i: NaN, r: NaN }
+Coordinate { t: 6.099999999999994, s: NaN, i: NaN, r: NaN }
+Coordinate { t: 6.199999999999994, s: NaN, i: NaN, r: NaN }
+Coordinate { t: 6.299999999999994, s: NaN, i: NaN, r: NaN }
+Coordinate { t: 6.399999999999993, s: NaN, i: NaN, r: NaN }
+Coordinate { t: 6.499999999999993, s: NaN, i: NaN, r: NaN }
+Coordinate { t: 6.5999999999999925, s: NaN, i: NaN, r: NaN }
+Coordinate { t: 6.699999999999992, s: NaN, i: NaN, r: NaN }
+Coordinate { t: 6.799999999999992, s: NaN, i: NaN, r: NaN }
+Coordinate { t: 6.8999999999999915, s: NaN, i: NaN, r: NaN }
+Coordinate { t: 6.999999999999991, s: NaN, i: NaN, r: NaN }
+Coordinate { t: 7.099999999999991, s: NaN, i: NaN, r: NaN }
+Coordinate { t: 7.19999999999999, s: NaN, i: NaN, r: NaN }
+Coordinate { t: 7.29999999999999, s: NaN, i: NaN, r: NaN }
+Coordinate { t: 7.39999999999999, s: NaN, i: NaN, r: NaN }
+Coordinate { t: 7.499999999999989, s: NaN, i: NaN, r: NaN }
+Coordinate { t: 7.599999999999989, s: NaN, i: NaN, r: NaN }
+Coordinate { t: 7.699999999999989, s: NaN, i: NaN, r: NaN }
+Coordinate { t: 7.799999999999988, s: NaN, i: NaN, r: NaN }
+Coordinate { t: 7.899999999999988, s: NaN, i: NaN, r: NaN }
+Coordinate { t: 7.999999999999988, s: NaN, i: NaN, r: NaN }
+Coordinate { t: 8.099999999999987, s: NaN, i: NaN, r: NaN }
+Coordinate { t: 8.199999999999987, s: NaN, i: NaN, r: NaN }
+Coordinate { t: 8.299999999999986, s: NaN, i: NaN, r: NaN }
+Coordinate { t: 8.399999999999986, s: NaN, i: NaN, r: NaN }
+Coordinate { t: 8.499999999999986, s: NaN, i: NaN, r: NaN }
+Coordinate { t: 8.599999999999985, s: NaN, i: NaN, r: NaN }
+Coordinate { t: 8.699999999999985, s: NaN, i: NaN, r: NaN }
+Coordinate { t: 8.799999999999985, s: NaN, i: NaN, r: NaN }
+Coordinate { t: 8.899999999999984, s: NaN, i: NaN, r: NaN }
+Coordinate { t: 8.999999999999984, s: NaN, i: NaN, r: NaN }
+Coordinate { t: 9.099999999999984, s: NaN, i: NaN, r: NaN }
+Coordinate { t: 9.199999999999983, s: NaN, i: NaN, r: NaN }
+Coordinate { t: 9.299999999999983, s: NaN, i: NaN, r: NaN }
+Coordinate { t: 9.399999999999983, s: NaN, i: NaN, r: NaN }
+Coordinate { t: 9.499999999999982, s: NaN, i: NaN, r: NaN }
+Coordinate { t: 9.599999999999982, s: NaN, i: NaN, r: NaN }
+Coordinate { t: 9.699999999999982, s: NaN, i: NaN, r: NaN }
+Coordinate { t: 9.799999999999981, s: NaN, i: NaN, r: NaN }
+Coordinate { t: 9.89999999999998, s: NaN, i: NaN, r: NaN }
+Coordinate { t: 9.99999999999998, s: NaN, i: NaN, r: NaN }
+vidurmodgil@Vidurs-MacBook-Air irsir_gt_project % 

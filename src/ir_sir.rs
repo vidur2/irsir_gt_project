@@ -21,9 +21,9 @@ impl IrSir {
     }
 
     pub fn estimate(&self, start: Coordinate, stop: f64, step: f64) -> Result<Vec<Coordinate>, Error> {
-        if (stop - start.get_t()) % step != 0. {
-            return Err(Error::RangeError)
-        }
+        // if (stop - start.get_t()) % step != 0. {
+        //     return Err(Error::RangeError)
+        // }
 
         if step < 0. && stop > start.get_t() {
             return Err(Error::NegativeSignError)
