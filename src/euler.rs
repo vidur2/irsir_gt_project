@@ -1,25 +1,25 @@
-use crate::{coordinate::Coordinate, ir_sir::IrSir};
+use crate::{coordinate::Coordinate, ir_sir::IrSir, estimator::{Estimator, Model}};
 
-pub struct Euler<'a> {
+pub struct Euler<'a, T: Model> {
     estimations: Vec<Coordinate>,
-    irsir: &'a IrSir,
+    model: &'a T,
 }
 
-impl<'a> Euler<'a> {
-    pub fn new(irsir: &'a IrSir) -> Self {
+impl<'a> Estimator<'a, IrSir> for Euler<'a, IrSir> {
+    fn new(model: &'a IrSir) -> Self {
         return Self {
-            irsir, 
+            model, 
             estimations: Vec::new(),
         }
     }
 
-    pub fn estimate(&mut self, start: Coordinate, stop: f64, step: f64) {
+    fn estimate(&mut self, start: Coordinate, stop: f64, step: f64) {
         let t = start.get_t() + step;
         let coord = Coordinate::new(
             t,
-            start.get_s() + self.irsir.ds_dt(start.get_s(), start.get_i()) * (step),
-            start.get_i() + self.irsir.di_dt(start.get_s(), start.get_i(), start.get_r()) * (step),
-            start.get_r() + self.irsir.dr_dt(start.get_i(), start.get_r()) * (step),
+            start.get_s() + self.model.ds_dt(start.get_s(), start.get_i()) * (step),
+            start.get_i() + self.model.di_dt(start.get_s(), start.get_i(), start.get_r()) * (step),
+            start.get_r() + self.model.dr_dt(start.get_i(), start.get_r()) * (step),
         );
         self.estimations.push(start);
 
@@ -28,7 +28,7 @@ impl<'a> Euler<'a> {
         }
     }
 
-    pub fn get_estimations(self) -> Vec<Coordinate> {
+    fn get_estimations(self) -> Vec<Coordinate> {
         return self.estimations;
     }
 }
