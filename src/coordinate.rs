@@ -1,3 +1,5 @@
+use std::fmt::Display;
+
 #[derive(Debug)]
 pub struct Coordinate {
     t: f64,
@@ -30,5 +32,13 @@ impl Coordinate {
 
     pub fn get_r(&self) -> f64 {
         return self.r
+    }
+}
+
+
+impl Display for Coordinate {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        write!(f, "(t: {}, s: {}, i: {}, r: {})", self.get_t(), self.get_s(), self.get_i(), self.get_r())?;
+        return Ok(());
     }
 }

@@ -14,6 +14,6 @@ fn main() {
     let output = ir_sir.estimate(Coordinate::new(0., 1.5, 1., 1.), 50., step_size).unwrap();
 
     for output in output.iter() {
-        println!("{:?}", output);
+        println!("{:#?}", output);
     }
 }
